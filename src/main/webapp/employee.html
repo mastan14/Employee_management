@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Management System</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #000;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .feature-section {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .dropdown {
+            display: none;
+            margin-top: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Employee Management System</h2>
+
+    <div class="navbar">
+        <a href="#" onclick="showFeature('updateProfile')">Update Profile</a>
+        <a href="#" onclick="showFeature('changePassword')">Change Password</a>
+        <a href="#" onclick="showFeature('salaryTransactions')">Salary Transactions</a>
+        <a href="#" onclick="showFeature('leaveRequest')">Leave Request</a>
+        <a href="Home.html" >Logout</a>
+    </div>
+
+    <div id="updateProfile" class="feature-section">
+        <h3>Update Profile Options</h3>
+        <form action="update.html" method="post">
+            <!-- Add form elements for update profile options -->
+            <button type="submit">Update Profile</button>
+            <div class="dropdown">
+                <label for="updateOptions">Select Option:</label>
+                <select id="updateOptions" name="updateOptions">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <div id="changePassword" class="feature-section">
+        <h3>Change Password Options</h3>
+        <form action="change_password.html" method="post">
+            <!-- Add form elements for change password options -->
+            <button type="submit">Change Password</button>
+            <div class="dropdown">
+                <label for="passwordOptions">Select Option:</label>
+                <select id="passwordOptions" name="passwordOptions">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <div id="salaryTransactions" class="feature-section">
+        <h3>Salary Transactions Options</h3>
+        <!-- Add content or form elements for salary transactions options -->
+        <form action="salary.html" method="post">
+            <button type="submit">Initiate Salary Transaction</button>
+            <div class="dropdown">
+                <label for="salaryOptions">Select Option:</label>
+                <select id="salaryOptions" name="salaryOptions">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="leaveRequest" class="feature-section">
+        <h3>Leave Request Options</h3>
+        <form action="Leave.html" method="post">
+            <!-- Add form elements for leave request options -->
+            <button type="submit">Leave Request</button>
+            <div class="dropdown">
+                <label for="leaveOptions">Select Option:</label>
+                <select id="leaveOptions" name="leaveOptions">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <div id="logout" class="feature-section">
+        <h3>Logout Options</h3>
+        <!-- Updated form for logout option -->
+        <form action="Home.html" method="post">
+            <button type="submit">Logout</button>
+            <div class="dropdown">
+                <label for="logoutOptions">Select Option:</label>
+                <select id="logoutOptions" name="logoutOptions">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function showFeature(featureId) {
+            var featureSections = document.getElementsByClassName('feature-section');
+            for (var i = 0; i < featureSections.length; i++) {
+                featureSections[i].style.display = 'none';
+            }
+
+            var selectedFeature = document.getElementById(featureId);
+            selectedFeature.style.display = 'block';
+        }
+
+        function logout() {
+            // Redirect to Home.html when Logout is clicked
+            window.location.href = 'Home.html';
+        }
+    </script>
+
+</body>
+
+</html>

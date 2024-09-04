@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Roboto:wght@300;400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/5baf8325-ed69-40b0-b9d2-d8c5d2bde3b0);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 13% 87%;
+  width: 100%;
+  margin: 40px;
+  background: rgb(254, 254, 254);
+  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 15px;
+  z-index: 10;
+}
+
+.main-menu {
+  overflow: hidden;
+  background: rgb(73, 57, 113);
+  padding-top: 10px;
+  border-radius: 15px 0 0 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.main-menu h1 {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px 0 30px;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+}
+
+nav {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+nav ul,
+nav ul li {
+  outline: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+nav ul li {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 0;
+  margin-left: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+nav ul li a b:nth-child(1),
+nav ul li a b:nth-child(2) {
+  position: absolute;
+  height: 15px;
+  width: 100%;
+  background: #fff;
+  display: none;
+}
+
+nav ul li a b:nth-child(1)::before,
+nav ul li a b:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+nav ul li a b:nth-child(1)::before {
+  border-bottom-right-radius: 20px;
+  background: rgb(73, 57, 113);
+}
+
+nav ul li a b:nth-child(2)::before {
+  border-top-right-radius: 20px;
+  background: rgb(73, 57, 113);
+}
+
+nav ul li.active a b:nth-child(1),
+nav ul li.active a b:nth-child(2) {
+  display: block;
+}
+
+nav ul li.active a {
+  text-decoration: none;
+  color: #000;
+  background: rgb(254, 254, 254);
+}
+
+.nav-icon {
+  width: 60px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-text {
+  display: block;
+  width: 120px;
+  height: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.left-content {
+  display: grid
+
+
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="main-menu">
+      <h1>Main Menu</h1>
+      <nav>
+        <ul>
+          <li class="nav-item active"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item"><a href="#">Services</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="left-content">
+        <div class="activities">
+          <h1>Activities</h1>
+          <div class="activity-container">
+            <div class="image-container img-one">
+              <img src="image1.jpg" alt="Image 1">
+              <div class="overlay">
+                <h3>Activity 1</h3>
+              </div>
+            </div>
+            <div class="image-container img-two">
+              <img src="image2.jpg" alt="Image 2">
+              <div class="overlay">
+                <h3>Activity 2</h3>
+              </div>
+            </div>
+            <div class="image-container img-three">
+              <img src="image3.jpg" alt="Image 3">
+              <div class="overlay">
+                <h3>Activity 3</h3>
+              </div>
+            </div>
+            <div class="image-container img-four">
+              <img src="image4.jpg" alt="Image 4">
+              <div class="overlay">
+                <h3>Activity 4</h3>
+              </div>
+            </div>
+            <div class="image-container img-five">
+              
+              <div class="overlay">
+                <h3>Activity 5</h3>
+              </div>
+            </div>
+            <div class="image-container img-six">
+              
+              <div class="overlay">
+                <h3>Activity 6</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

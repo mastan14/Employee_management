@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+   
+     <servlet>
+  <servlet-name>signup1121</servlet-name>
+  <servlet-class>Emp.Leave</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>signup1121</servlet-name>
+  <url-pattern>/demo6</url-pattern>
+</servlet-mapping>
+   
+      
+  <servlet>
+  <servlet-name>signup112</servlet-name>
+  <servlet-class>Emp.Update</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>signup112</servlet-name>
+  <url-pattern>/demo4</url-pattern>
+</servlet-mapping>
+   
+   
+  <servlet>
+  <servlet-name>signup1</servlet-name>
+  <servlet-class>Emp.singup</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>signup1</servlet-name>
+  <url-pattern>/Demo2</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+  <servlet-name>signup11</servlet-name>
+  <servlet-class>Emp.Home</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>signup11</servlet-name>
+  <url-pattern>/Demo3</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+  <servlet-name>signup111</servlet-name>
+  <servlet-class>Emp.passwordServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>signup111</servlet-name>
+  <url-pattern>/demo11</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+  <servlet-name>signup11p</servlet-name>
+  <servlet-class>Emp.Admin</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>signup11p</servlet-name>
+  <url-pattern>/Demo8</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+  <servlet-name>signup11pp</servlet-name>
+  <servlet-class>Emp.Delete</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>signup11pp</servlet-name>
+  <url-pattern>/demo9</url-pattern>
+</servlet-mapping>
+</web-app>

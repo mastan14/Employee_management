@@ -1,0 +1,178 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #registration-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .registration {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 70%;
+        }
+
+        .registration-title {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-registration {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Divide the page into two sections */
+        .section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-section,
+        .right-section {
+            width: 48%;
+        }
+
+        @media(max-width: 768px) {
+            .section {
+                flex-direction: column;
+            }
+
+            .left-section,
+            .right-section {
+                width: 100%;
+            }
+        }
+    </style>
+    
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "qfsP71NP_D1r9ZTUq",
+      });
+   })();
+</script>
+<script src="email.js"></script>
+<script type="text/javascript">
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+</script>
+
+</head>
+<body>
+
+    <div id="registration-page">
+        <div class="registration">
+            <h2 class="registration-title">User Registration</h2>
+            <form class="form-registration" action="Demo2" >
+                <!-- Left Section -->
+            
+            
+         <div class="section">
+                    <div class="left-section">
+                        <label for="name">Name</label>
+                        <input type="text" name="Name" id="name" placeholder="Enter your name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+                        <label for="designation">Designation</label>
+                        <input type="text" name="designation" placeholder="Enter your designation" required>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="right-section">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" name="phoneNumber" placeholder="Enter your phone number" required>
+
+                        <label for="department">Department</label>
+                        <input type="text" name="department" placeholder="Enter your department" required>
+
+                        <label for="dateOfJoining">Date of Joining</label>
+                        <input type="date" name="dateOfJoining" required>
+                    </div>
+                </div>
+
+                <!-- Teaching and Industry Experience -->
+                <label for="teachingExperience">Teaching Experience (in years)</label>
+                <input type="number" name="teachingExperience" placeholder="Enter teaching experience" required>
+
+                <label for="industryExperience">Industry Experience (in years)</label>
+                <input type="number" name="industryExperience" placeholder="Enter industry experience" required>
+
+                <button type="submit" onclick="Sendemail()">Register</button>
+            </form>
+
+            <p>Already have an account? <a href="Home.html">Back to Login</a></p>
+        </div>
+    </div>
+
+	<script src="email.js">
+	
+	
+	</script>
+</body>
+</html>
+
+
+
